@@ -1,0 +1,451 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+
+
+
+function chile(){
+var letra, nombre, num, conver, ancho, x;
+nombre=document.getElementById("textnombre").value;
+ancho=nombre.length;
+conver=nombre.toUpperCase();
+document.getElementById("textnombre").value=conver;
+for(x=0;x<=ancho-1;x++){
+	num=conver.charAt(x);
+	if((num>='A')&&(num<='Z')||(num==' ')){
+		}
+		else{
+			alert("Se encontró un caracter incorrecto");
+			break;
+			
+			}
+	}
+}
+function asunto(){
+	var asun, asun2;
+	asun=document.getElementById("textasunto").value;
+	asun2=asun.toUpperCase();
+	document.getElementById("textasunto").value=asun2;
+	}
+	
+	
+function chile2(){
+var suguridad1,seguridad2;
+seguridad1=document.getElementById("seguridad1").value
+seguridad2=document.getElementById("seguridad2").value
+if(seguridad1==seguridad2){
+	}
+	else{
+		alert("La clave no coinciden")
+		}
+}
+	function enviar(){
+		var ch1, ch2, ch3, ch4, ch5 ;
+	    ch1=document.getElementById("textnombre").value;
+		ch2=document.getElementById("txtmail").value;
+		ch3=document.getElementById("texttelefono").value;
+		ch4=document.getElementById("textasunto").value;
+		ch5=document.getElementById("seguridad2").value;
+		
+		if((ch1=="")||(ch2=="")||(ch3=="")||(ch4=="")||(ch5=="")){
+			alert("Favor de introducir toda la informacion");
+		}
+		else{
+			alert("Mensaje enviado");
+			
+			document.getElementById("textnombre").value="";
+		    document.getElementById("txtmail").value="";
+		    document.getElementById("texttelefono").value="";
+		    document.getElementById("textasunto").value="";
+		    document.getElementById("seguridad2").value="";
+			
+		}
+		}
+		var mail, ancho, x, ar, ar2, p, p2;
+function email(){
+mail=document.getElementById("txtmail").value;
+
+
+ 
+	if(((mail.charAt(0)>='0')&&(mail.charAt(0)<='9'))||(mail.charAt(0)=='@'))
+	{
+			alert("No se permiten números en el primer caracter");
+			
+		}
+	else
+	{
+		ar=mail.indexOf('@');
+		ar2=mail.lastIndexOf('@');
+		if(ar!=ar2){
+			alert("Solo se permite una @");
+			
+		}
+		
+		else{
+			if((ar==-1)&&(ar2==-1))
+			{
+			alert("Introduce una @");	
+		
+				}
+				else{
+					p=mail.indexOf('.');
+					
+				  if(p==-1){
+					  alert("Introduce un punto");
+					  
+					  }
+			  }
+					}
+			
+			
+ }
+}
+
+
+
+
+	
+function tel(){
+	var num, ancho, numr;
+	num=document.getElementById("texttelefono").value;
+	ancho=num.length;
+	for(x=0; x<=ancho-1; x++){
+		numr=num.charAt(x);
+	if(((numr>='0') && (numr<='9' ))|| (numr=='-'))
+	{
+		}
+		else{
+			alert("Solo se permiten números y guión");
+			break;
+			
+			}
+		}
+	}
+	
+	
+	
+
+	
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>CONVERSE</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes somos?</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+		</ul>	
+        <br>
+        <center>
+          <img src="../converse.jpg" width="60%" height="30%" alt="holi">
+        </center>	
+  </div>
+	<div data-role="footer">
+		<h4>Autor:Araceli Rivas</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes Somos?</h1>
+	</div>
+	<div data-role="content">
+    <center><h1>CONVERSE</h1></center>
+    <br>	
+		Converse es una compañía estadounidense de zapatos que mantiene operaciones desde principios del siglo XX.
+
+El fabricante de zapatos de caucho Marquis Mills Converse abrió su primera fábrica en Malden, Massachusetts, en 1908. Los diseños sencillos y cómodos de Converse pronto ganaron muchos seguidores, pero fue una década después cuando comenzó su verdadero estallido o su gran momento, al incluir la lona en la manufactura de sus productos, pues éstos se hicieron mucho más resistentes y adecuados para el baloncesto, deporte que los adoptó como sus zapatos oficiales.	<br>
+<br>
+<center>
+  <img src="../converse.jpg" width="60%" height="30%" alt="yo">
+</center>
+<br>
+<center><h1>MISIÓN</h1></center>
+<br>
+Brindar el servicio de desarrollo de sitos web,multimedia e imagen corporativa,caracterizándose por un alto compromiso con la calidad del diseño gráfico en todos nuestros servicios.
+<br>
+<center>
+  <img src="../cheli/12.jpg" width="50%" height="30%" alt="hola">
+</center>
+<br>
+<center><h1>VISIÓN</h1></center>
+<br>
+Ser la mejor empresa proveedora en cuanto a diseño gráfico y funcionalidad del desarrolllo de sitios web,multimedia e imágen corporativa,impactando positivamente su ambiente con acciones de bien social.
+<br>
+<center>
+  <img src="../cheli/imagesCAWHYD2U.jpg" width="60%" height="30%" alt="sas">
+</center>
+<br>
+<center><h1>VALORES</h1></center>
+<br>
+La publicidad en el éxito del producto y la trascendencia de la marca “CONVERSE ALL STAR” “El éxito del producto no consiste en que lo compren más que a la competencia, sino en conseguir ser la única opción para el cliente”.
+<br>
+<center>
+  <img src="../converse.jpg" width="60%" height="30%" alt="sum">
+</center>
+  </div>
+	<div data-role="footer">
+		<center><h4>CONVERSE</h4></center>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>CONVERSE</h1>
+	</div>
+	<div data-role="content">	
+		<center><h1>Modelo en tenis de bota</h1></center>	
+        <br>
+        <center>
+          <img src="../cheli/images.jpg" width="60%" height="30%" alt="lol">
+        </center>
+       <center>
+        Características:
+        <br>
+        Color: Negro
+        <br>
+        Modelo: Bota
+        <br>
+        $800
+        <br>
+        </center>
+        <center><h1>Modelo en tenis choclo</h1></center>
+        <br>
+        <center>
+          <img src="../cheli/imagesCARJ1PM3.jpg" width="60%" height="30%" alt="kit">
+        </center>
+        <center>
+        Características:
+        <br>
+        Color: Rosa
+        <br>
+        Modelo: Choclo
+        <br>
+        $850
+        <br>
+        </center>
+        <center><h1>Modelo en sandalia</h1></center>
+        <br>
+        <center>
+          <img src="../cheli/imagesCAWCT457.jpg" width="60%" height="30%" alt="lulu">
+        </center>
+        <center>
+        Características:
+        <br>
+        Color: Blanco
+        <br>
+        Modelo: Sandalia
+        <br>
+        $750
+        <br>
+        </center>
+        <center><h1>Modelo en huarache</h1></center>
+        <br>
+        <center>
+          <img src="../cheli/imagesCA0VWH9Q.jpg" width="60%" height="50%" alt="uja">
+        </center>
+        <center>
+        Características:
+        <br>
+        Color: Negro
+        <br>
+        Modelo: Huarache
+        <br>
+        $700
+        <br>
+        </center>
+        <center><h1>Modelo bota alta</h1></center>
+        <br>
+        <center>
+          <img src="imagenes/conver bota.jpg" width="60%" height="30%">
+        </center>
+        <center>
+        Características:
+        <br>
+        Color: Azúl
+        <br>
+        Modelo: Bota alta
+        <br>
+        $900
+        <br>
+        </center>
+         <center><h1>Modelo choclo doble vista</h1></center>
+        <br>
+        <center>
+          <img src="imagenes/bjgvh.dfhg.jpg" width="60%" height="30%">
+        </center>
+        <center>
+        Características:
+        <br>
+        Color: Azúl y Rosa
+        <br>
+        Modelo: Choclo doble vista
+        <br>
+        $850
+        <br>
+        </center>
+      <center><h1>Modelos Exclusivos y Costos En Tenis Choclo y Bota</h1></center>
+        <br>
+        <center>
+          <img src="../cheli/1.PNG" width="90%" height="30%" alt="de">
+        </center>
+  </div>
+	<div data-role="footer">
+		<h4>CONVERSE</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">
+    <center><h1>INTEGRANTES DEL EQUIPO</h1></center>
+    <br>
+        <b>DESCRIPCIÓN PERSONAL</b>
+        <br>	
+    	<b>MI NOMBRE ES:</b> Araceli Rivas Cruz	
+        <br>
+        <b>SEXO:</b> Femenino
+        <br>
+        <b> EDAD:</b> 17
+        <br>
+        <b>CORREO ELECTRONICO:</b> xelii_280597@hotmail.com
+        <br>
+        <b>DOMICILIO:</b> Calle Mariano Matamoros #14 Colon
+        <br>
+        <b>TELÉFONO:</b>243-112-69-97
+        <br>
+        <b>ASIGNATURA:</b>Desarrolla Aplicaciones Móviles
+        <br>
+        <b>COLOR FAVORITO: </b> Rosa
+        <br>
+        <b>CURSO</b>: El cuarto semestre en cbtis 184
+        <br>
+        <b>PASATIEMPO:</b> Escuchar Música
+        <br> 
+        <center>
+          <img src="imagenes/IMG_20140517_191600.jpg" width="60%" height="40%">
+        </center>
+<br>
+<br>
+        <b>DESCRIPCIÓN PERSONAL</b>
+        <br>
+        <b>MI NOMBRE ES</b>: Ruben Emmanuel Marquez Torres
+        <br>
+        <b>SEXO:</b>Masculino
+        <br>
+        <b>EDAD:</b> 17
+        <br>
+        <b>CORREO ELECTRONICO:</b>aminowana_michaelis@hotmail.com
+        <br>
+        <b>DOMICILIO: </b>Iturbide S/N Chietla
+        <br>
+        <b>TELÉFONO:</b>243-103-91-96
+        <br>
+        <b>ASIGNATURA:</b> Desarrolla Aplicaciones Móviles
+        <br>
+        <b>COLOR FAVORITO:</b> Negro
+        <br>
+        <b>CURSO:</b> El cuarto semestre en cbtis 184
+        <br>
+        <b>PASATIEMPO:</b> Escuchar Música
+        <center>
+          <img src="imagenes/IMG_20140609_122254.jpg" width="60%" height="40%" alt="ruben">
+        </center>
+        
+        
+        
+  </div>
+	<div data-role="footer">
+		<h4>CONVERSE</h4>
+	</div>
+</div>
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+        
+	</div>
+     
+    
+    
+    
+	<div data-role="content">
+    <center>
+      <img src="imagenes/converse.jpg" width="60%" height="30%">
+    </center>	
+   <center><h1>¿Quiere mandar un mensaje?</h1></center>
+		<center><table width="0" border="0">
+  <tr>
+    <td>Nombre</td>
+    <td><div data-role="fieldcontain">
+     
+      <input type="text" name="textinput" id="textnombre" value=""  onblur="chile()"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td>E-mail</td>
+    <td><div data-role="fieldcontain">
+     
+      <input type="text" name="textinput2" id="txtmail" value=""  onblur="email()"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td>Teléfono</td>
+    <td><div data-role="fieldcontain">
+      
+      <input type="text" name="textinput3" id="texttelefono" value=""  onblur="tel()" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Asunto</td>
+    <td><div data-role="fieldcontain">
+      
+       
+        <textarea cols="40" rows="8" name="textarea" 
+        id="textasunto" onblur="asunto()"></textarea>
+      
+     
+     </td>
+  </tr>
+  <tr> <td>Seguridad</td></tr>
+  <tr>
+   
+    <td><div data-role="fieldcontain">
+      <input type="text" name="textinput5" id="seguridad1"
+      disabled="disabled" value="Araceli"  />
+      <td><div data-role="fieldcontain">
+        <input type="text" name="textinput6" id="seguridad2" onblur="chile2()" value=""  />
+      </div></td>
+    </div></td>
+  </tr>
+  <tr>
+    <td>Enviar</td>
+    <td><button onclick="enviar()">Enviar</button></td>
+  </tr>
+</table></center>
+
+<center> <b>Dirección:</b>Galerías Metepec, Pino Suárez #98, Toluca<br>
+    <b>Correo Electrónico:</b>Converse-345@hotmail.com<br>
+    <b>Teléfono:</b>43-8-76-98<br></center>
+	</div>
+    
+	<div data-role="footer">
+		<h4>CONVERSE </h4>
+	</div>
+</div>
+</body>
+</html>
+
